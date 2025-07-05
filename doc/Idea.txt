@@ -1,0 +1,11 @@
+- shaders
+- Beautiful art
+- parallaxe effect
+- particles
+- Intro scene
+- UI
+- Game Mechanic
+- SFX
+- Static view
+- moving hand
+- spawing fire (3 different sizes)
