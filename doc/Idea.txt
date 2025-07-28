@@ -1,8 +1,9 @@
-- shaders
+- Shaders
 - Beautiful art
 - parallaxe effect
 - particles
 - Intro scene
+- Great Open menu
 - UI
 - Game Mechanic
 - SFX
