@@ -1,27 +1,31 @@
 extends Node2D
 
-@export var radius:float = 100.0
-@export var speed:float= 100.0
-@export var turn_center:Vector2 = Vector2(200, 0)
-@onready var color_rect: ColorRect = $ColorRect
-@onready var rect_center:Vector2 = color_rect.position + Vector2(color_rect.size.x/2, color_rect.size.y/2);
+@onready var hand: ColorRect = $hand
+#@export var radius:float = 100.0
+#@export var speed:float= 100.0
+@export var turn_center:Vector2 = Vector2(300, 0)
+@onready var hand_center:Vector2 = hand.position + Vector2(hand.size.x/2, hand.size.y/2);
+@onready var hand_center_turn:float # set hand in the center 
 
 func _ready() -> void:
-	turn_center += rect_center
-	color_rect.position.x= (turn_center.x - color_rect.size.x/2) - turn_center.x/2
+	turn_center += hand_center
+	hand_center_turn = (turn_center.x - hand.size.x/2)
+	hand.position.x = hand_center_turn - turn_center.x/2
 	
 func _process(delta: float) -> void:
 	pass
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_up"):
-		pass
+		hand.position.x = hand_center_turn
+		hand.position.y = -hand_center_turn + hand_center_turn
 	if event.is_action_pressed("ui_left"):
-		color_rect.position.x = (turn_center.x - color_rect.size.x/2) - turn_center.x/2
+		hand.position.x = hand_center_turn - turn_center.x/2
+		hand.position.y = turn_center.y - hand.size.y/2
 	if event.is_action("ui_right"):
-		color_rect.position.x = (turn_center.x - color_rect.size.x/2) + turn_center.x/2
-		pass
+		hand.position.x = hand_center_turn + turn_center.x/2
+		hand.position.y = turn_center.y - hand.size.y/2
 
 func _draw() -> void:
-	draw_circle(turn_center, 2, Color.ALICE_BLUE)
+	draw_circle(turn_center, 10, Color.ALICE_BLUE)
 	pass

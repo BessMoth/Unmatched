@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/defaults/default_clear_color=Color(0.368039, 0.848299, 1, 1)
 
 [file_customization]
 
@@ -31,3 +33,4 @@ folder_colors={
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.368039, 0.848299, 1, 1)
