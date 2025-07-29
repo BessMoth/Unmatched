@@ -13,6 +13,7 @@ offset_left = 567.0
 offset_top = 431.0
 offset_right = 767.0
 offset_bottom = 631.0
+color = Color(0.176471, 0.290196, 1, 1)
 
 [node name="Area2D" type="Area2D" parent="hand"]
 

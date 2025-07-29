@@ -11,6 +11,7 @@ script = ExtResource("1_vaxlp")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+color = Color(0.74355, 0.262083, 0.558589, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, 20)
