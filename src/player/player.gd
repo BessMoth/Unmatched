@@ -1,5 +1,5 @@
 extends Node2D
-
+class_name Player
 @onready var hand: ColorRect = $hand
 #@export var radius:float = 100.0
 #@export var speed:float= 100.0

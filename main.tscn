@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ur4y72wvkm8k"]
+[gd_scene load_steps=3 format=3 uid="uid://ur4y72wvkm8k"]
 
 [ext_resource type="PackedScene" uid="uid://dlf8ysbmj0qq4" path="res://src/player/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://d24nwue6r8hmu" path="res://src/spawn/spawn.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
@@ -21,3 +22,6 @@ render_target_update_mode = 4
 
 [node name="Player" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_ig7tw")]
 position = Vector2(4, 214)
+
+[node name="Spawn" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_0xm2m")]
+position = Vector2(134, 736)
