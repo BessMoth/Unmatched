@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0lboht653fwj"]
+
+[ext_resource type="PackedScene" uid="uid://b6nedpledqouk" path="res://src/Ui/InGameUI/Heart.tscn" id="1_boiuo"]
+[ext_resource type="Script" uid="uid://yr1bnqkier0o" path="res://src/Ui/InGameUI/in_game_ui.gd" id="1_o4h7n"]
+
+[node name="InGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o4h7n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 600.0
+grow_vertical = 0
+
+[node name="Heart" parent="HBoxContainer" instance=ExtResource("1_boiuo")]
+layout_mode = 2
+
+[node name="Heart2" parent="HBoxContainer" instance=ExtResource("1_boiuo")]
+layout_mode = 2
+
+[node name="Heart3" parent="HBoxContainer" instance=ExtResource("1_boiuo")]
+layout_mode = 2

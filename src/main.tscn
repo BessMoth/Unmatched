@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ur4y72wvkm8k"]
+
+[ext_resource type="PackedScene" uid="uid://dlf8ysbmj0qq4" path="res://src/player/player.tscn" id="1_5q4o7"]
+[ext_resource type="PackedScene" uid="uid://d24nwue6r8hmu" path="res://src/spawn/spawn.tscn" id="2_3cfgd"]
+[ext_resource type="PackedScene" uid="uid://cv5id112qu6yd" path="res://src/match/match.tscn" id="3_fyndt"]
+[ext_resource type="PackedScene" uid="uid://b0lboht653fwj" path="res://src/Ui/InGameUI/in_game_ui.tscn" id="4_3cfgd"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 6.0
+offset_right = -3.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Player" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("1_5q4o7")]
+position = Vector2(10, -8)
+
+[node name="Match" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("3_fyndt")]
+position = Vector2(918, 475)
+
+[node name="Spawns" type="Node2D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
+
+[node name="Spawn" parent="CanvasLayer/SubViewportContainer/SubViewport/Spawns" instance=ExtResource("2_3cfgd")]
+position = Vector2(-71, 556)
+spawn_direction = 2
+
+[node name="Spawn2" parent="CanvasLayer/SubViewportContainer/SubViewport/Spawns" instance=ExtResource("2_3cfgd")]
+position = Vector2(2068, 536)
+spawn_direction = 1
+
+[node name="Spawn3" parent="CanvasLayer/SubViewportContainer/SubViewport/Spawns" instance=ExtResource("2_3cfgd")]
+position = Vector2(979, -155)
+
+[node name="InGameUI" parent="CanvasLayer/SubViewportContainer" node_paths=PackedStringArray("the_match") instance=ExtResource("4_3cfgd")]
+layout_mode = 2
+the_match = NodePath("../SubViewport/Match")

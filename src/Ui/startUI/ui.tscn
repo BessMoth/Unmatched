@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://biewud65bk8xr"]
 
-[ext_resource type="Script" uid="uid://d32impx54my5i" path="res://src/Ui/ui.gd" id="1_f2i1s"]
-[ext_resource type="PackedScene" uid="uid://ddicdfikpjcnw" path="res://src/Ui/custom_button.tscn" id="2_rbcuf"]
+[ext_resource type="Script" uid="uid://d32impx54my5i" path="res://src/Ui/startUI/ui.gd" id="1_f2i1s"]
+[ext_resource type="PackedScene" uid="uid://ddicdfikpjcnw" path="res://src/Ui/startUI/custom_button.tscn" id="2_rbcuf"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3

@@ -1,6 +1,6 @@
 extends Control
 
-@export var scene: PackedScene = load("res://main.tscn")
+@export var scene: PackedScene = preload("res://src/main.tscn")
 
 func _on_start_button_down() -> void:
 	SceneTranslation.change_scene(scene)
