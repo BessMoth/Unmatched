@@ -16,6 +16,10 @@ run/main_scene="uid://ur4y72wvkm8k"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneTranslation="*res://src/VFX/scene_translation.tscn"
+
 [display]
 
 window/size/viewport_width=1920
