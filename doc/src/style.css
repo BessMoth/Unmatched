@@ -3,4 +3,9 @@ html, body{
     align-items: center;
     align-self: center;
     text-align: center;
+    background-color: bisque;
+}
+
+img{
+    border-radius: 10px;
 }
