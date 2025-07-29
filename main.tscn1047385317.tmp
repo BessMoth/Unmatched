@@ -29,13 +29,9 @@ position = Vector2(10, -8)
 
 [node name="Spawn" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_0xm2m")]
 position = Vector2(-71, 556)
-spawn_direction = 2
 
 [node name="Spawn2" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_0xm2m")]
-unique_name_in_owner = true
 position = Vector2(2068, 536)
-spawn_direction = 1
 
 [node name="Spawn3" parent="CanvasLayer/SubViewportContainer/SubViewport" instance=ExtResource("2_0xm2m")]
-unique_name_in_owner = true
 position = Vector2(979, -155)

@@ -51,4 +51,4 @@ up={
 [rendering]
 
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0.368039, 0.848299, 1, 1)
+environment/defaults/default_clear_color=Color(0.967777, 0, 0.441573, 1)
