@@ -30,6 +30,7 @@ window/defaults/default_clear_color=Color(0.368039, 0.848299, 1, 1)
 [file_customization]
 
 folder_colors={
+"res://build/": "gray",
 "res://res/": "yellow",
 "res://src/": "green"
 }
